@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+            if (username) {
+                document.getElementById("welcome-text").innerText = `Welcome, ${username}!`;
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 id="welcome-text">Welcome!</h2>
+        <p>You have successfully logged in.</p>
+        <a href="/login" class="logout-btn">Log out</a>
+    </div>
+</body>
+</html>
